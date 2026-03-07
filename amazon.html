@@ -3,17 +3,17 @@
 <head>
     <link rel="icon" type="image/jpg" href="360_F_102495008_OyNsUqekTcBOwEmKDAi0vpHLJ46UM1Sa.jpg">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boutique - Zone Bon Plan</title>
     <style>
         :root { --main-blue: #00d2ff; --main-red: #ff0055; --bg: #0b0e14; --card: #161b22; }
         body { margin:0; font-family: sans-serif; background: var(--bg); color: white; display: flex; flex-direction: column; min-height: 100vh; }
         
-        nav { display: flex; justify-content: space-between; padding: 15px 8%; background: #0d1117; border-bottom: 1px solid #30363d; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; background: #0d1117; border-bottom: 1px solid #30363d; }
         .nav-links a { color: #8b949e; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.8rem; }
         
         .header-page { text-align: center; padding: 40px 0; background: #0d1117; margin-bottom: 10px; }
 
-        /* BARRE DE RECHERCHE */
         .search-container { text-align: center; padding: 20px 8%; margin-bottom: 20px; }
         #searchBar { 
             width: 100%; 
@@ -49,6 +49,12 @@
         .amazon-link:hover { background: #ff9900; }
 
         .footer-text { text-align: center; padding: 20px 0; color: #484f58; font-size: 0.75rem; background: transparent; margin: 0; width: 100%; }
+
+        @media (max-width: 600px) {
+            nav { flex-direction: column; gap: 10px; padding: 15px 5%; }
+            .nav-links { margin-left: 0; }
+            .nav-links a { margin: 0 10px; }
+        }
     </style>
 </head>
 <body>
@@ -71,6 +77,7 @@
     </div>
 
     <div class="product-grid" id="productGrid">
+        
         <div class="p-card">
             <div class="promo-badge">-25%</div>
             <div class="video-wrapper">
@@ -94,12 +101,11 @@
                 <a href="https://amzn.to/3P5eNeV" target="_blank" class="amazon-link">📦 VOIR SUR AMAZON</a>
             </div>
         </div>
-    </div>
 
-            <div class="p-card">
+        <div class="p-card">
             <div class="promo-badge">-10%</div>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/WUcBxci5U60" title="Chaise Songmics" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/WUcBxci5U60" title="Bureau" allowfullscreen></iframe>
             </div>
             <div class="p-content">
                 <h3>Bureau Ergonomique HLONONE LED</h3>
@@ -107,9 +113,8 @@
                 <a href="https://amzn.to/4d7vxw4" target="_blank" class="amazon-link">📦 VOIR SUR AMAZON</a>
             </div>
         </div>
-    </div>
 
-    <p class="footer-text">© 2026 ZONE BON PLAN | Ryan - TOUS DROITS RÉSERVÉS</p>
+    </div> <p class="footer-text">© 2026 ZONE BON PLAN | Ryan - TOUS DROITS RÉSERVÉS</p>
 
     <script>
         function filterProducts() {
@@ -127,6 +132,4 @@
         }
     </script>
 </body>
-
 </html>
-
