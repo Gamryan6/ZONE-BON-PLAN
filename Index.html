@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ZONE BON PLAN - Accueil</title>
+    <style>
+        :root { --main-blue: #00d2ff; --main-red: #ff0055; --bg: #0b0e14; --card: #161b22; }
+        body { margin:0; font-family: 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: white; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; background: rgba(13, 17, 23, 0.95); border-bottom: 1px solid #30363d; position: sticky; top:0; z-index:1000; }
+        .logo { font-size: 1.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        .logo span { color: var(--main-blue); }
+        .nav-links a { color: #8b949e; text-decoration: none; margin-left: 25px; font-weight: 600; transition: 0.3s; font-size: 0.9rem; }
+        .nav-links a:hover { color: white; }
+
+        .hero { padding: 80px 10% 100px 10%; text-align: center; background: radial-gradient(circle at top, #1c2128 0%, var(--bg) 70%); }
+        .yt-logo { width: 150px; height: 150px; border-radius: 50%; margin-bottom: 30px; border: 3px solid var(--main-blue); box-shadow: 0 0 20px rgba(0, 210, 255, 0.3); transition: 0.5s; }
+        .yt-logo:hover { transform: scale(1.05); box-shadow: 0 0 35px rgba(0, 210, 255, 0.6); }
+
+        .hero h1 { font-size: 3.5rem; margin: 0; background: linear-gradient(90deg, #fff, var(--main-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { color: #8b949e; max-width: 700px; margin: 20px auto; font-size: 1.1rem; }
+
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 50px 10%; flex-grow: 1; }
+        .f-card { background: var(--card); padding: 30px; border-radius: 12px; border: 1px solid #30363d; transition: 0.3s; }
+        .f-card:hover { border-color: var(--main-blue); transform: translateY(-5px); }
+        .f-card h3 { color: var(--main-blue); margin-top: 0; }
+
+        .cta-container { margin-top: 40px; }
+        .btn { padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; margin: 10px; }
+        .btn-blue { background: var(--main-blue); color: #000; }
+        .btn-outline { border: 1px solid #30363d; color: white; }
+        .btn:hover { opacity: 0.8; transform: scale(1.02); }
+
+        /* Footer sans barre */
+        .footer-text { text-align: center; padding: 40px 0 20px 0; color: #484f58; font-size: 0.75rem; background: transparent; margin: 0; width: 100%; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">ZONE <span>BON PLAN</span></div>
+        <div class="nav-links">
+            <a href="index.html">ACCUEIL</a>
+            <a href="amazon.html">BOUTIQUE AMAZON</a>
+            <a href="contact.html">REJOINDRE / CONTACT</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <img src="360_F_102495008_OyNsUqekTcBOwEmKDAi0vpHLJ46UM1Sa.jpg" alt="Logo Zone Bon Plan" class="yt-logo">
+        <h1>ÉQUIPE-TOI SANS TE RUINER</h1>
+        <p>Bienvenue sur <strong>Zone Bon Plan</strong>. Ici, on déniche pour toi les meilleures offres Hardware et Gaming d'Amazon.</p>
+        <div class="cta-container">
+            <a href="amazon.html" class="btn btn-blue">VOIR LES BONS PLANS</a>
+            <a href="contact.html" class="btn btn-outline">MA CHAÎNE YOUTUBE</a>
+        </div>
+    </section>
+
+    <div class="features">
+        <div class="f-card">
+            <h3>🔍 Sélection Rigoureuse</h3>
+            <p>On ne poste pas n'importe quoi. Chaque produit est analysé pour son rapport qualité/prix.</p>
+        </div>
+        <div class="f-card">
+            <h3>🎬 Preuve en Vidéo</h3>
+            <p>Besoin de voir le produit en action ? Rendez-vous sur la page boutique pour nos présentations.</p>
+        </div>
+        <div class="f-card">
+            <h3>🤝 Communauté active</h3>
+            <p>Rejoignez le Discord pour échanger avec d'autres passionnés.</p>
+        </div>
+    </div>
+
+    <p class="footer-text">© 2026 ZONE BON PLAN | Ryan - TOUS DROITS RÉSERVÉS</p>
+</body>
+</html>
