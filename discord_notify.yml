@@ -1,16 +1,12 @@
-name: Alerte Pépite Discord
-on:
-  push:
-    paths:
-      - 'amazon.html' # Le bot s'active seulement si tu touches à ce fichier
+name: Test_Zone_Bon_Plan
+on: [push] # S'active à chaque fois que tu enregistres un truc sur GitHub
 
 jobs:
-  notify:
+  discord-message:
     runs-on: ubuntu-latest
     steps:
-      - name: Envoyer le message sur Discord
+      - name: Envoi test
         run: |
-          curl -H "Content-Type: application/json" \
-          -X POST \
-          -d '{"content": "🚨 **NOUVELLE PÉPITE AJOUTÉE SUR LE SITE !** 🚨\n\nUne nouvelle case vient d’être publiée sur la Zone. Allez checker ça vite ! \n\n👉 https://ton-site.github.io/amazon.html"}' \
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{"content": "🚀 Test réussi ! Le site Zone Bon Plan vient d'être mis à jour."}' \
           ${{ secrets.DISCORD_WEBHOOK }}
