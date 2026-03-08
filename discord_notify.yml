@@ -1,0 +1,16 @@
+name: Alerte Pépite Discord
+on:
+  push:
+    paths:
+      - 'amazon.html' # Le bot s'active seulement si tu touches à ce fichier
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Envoyer le message sur Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d '{"content": "🚨 **NOUVELLE PÉPITE AJOUTÉE SUR LE SITE !** 🚨\n\nUne nouvelle case vient d’être publiée sur la Zone. Allez checker ça vite ! \n\n👉 https://ton-site.github.io/amazon.html"}' \
+          ${{ secrets.DISCORD_WEBHOOK }}
