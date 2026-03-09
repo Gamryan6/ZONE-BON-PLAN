@@ -39,13 +39,22 @@
         .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; background: #000; flex-shrink: 0; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0; }
         
-        .p-content { padding: 20px; text-align: center; display: flex; flex-direction: column; flex-grow: 1; }
-        .p-content h3 { margin: 0; font-size: 1.1rem; color: #f0f6fc; min-height: 2.6rem; display: flex; align-items: center; justify-content: center; }
+        .p-content { padding: 20px; text-align: center; display: flex; flex-direction: column; flex-grow: 1; align-items: center; }
+        .p-content h3 { margin: 0; font-size: 1.1rem; color: #f0f6fc; min-height: 2.6rem; display: flex; align-items: center; justify-content: center; width: 100%; }
         
+        /* --- STYLE DES ETOILES --- */
+        .stars-container { margin: 10px 0; display: flex; gap: 5px; justify-content: center; }
+        .star { font-size: 1.5rem; color: #484f58; cursor: pointer; transition: color 0.2s; }
+        .star:hover, .star.hovered { color: #f29339; }
+        .star.active { color: #f29339; }
+        .stars-container.voted .star { cursor: default; } /* Enlève le pointeur si déjà voté */
+        .vote-msg { font-size: 0.75rem; color: #8b949e; margin-top: -5px; margin-bottom: 10px; min-height: 15px;}
+        /* ------------------------- */
+
         .price-tag { font-size: 1.5rem; font-weight: bold; color: #3fb950; margin: 10px 0 5px 0; }
         .old-price { text-decoration: line-through; color: #8b949e; font-size: 1rem; display: block; margin-bottom: 2px; }
         
-        .amazon-link { margin-top: auto; display: block; background: #f29339; color: #000; text-decoration: none; padding: 12px; border-radius: 6px; font-weight: bold; transition: 0.2s; }
+        .amazon-link { margin-top: auto; display: block; background: #f29339; color: #000; text-decoration: none; padding: 12px; border-radius: 6px; font-weight: bold; transition: 0.2s; width: 100%; box-sizing: border-box;}
         .amazon-link:hover { background: #ff9900; }
 
         .footer-text { text-align: center; padding: 20px 0; color: #484f58; font-size: 0.75rem; background: transparent; margin: 0; width: 100%; }
@@ -79,12 +88,51 @@
     <div class="product-grid" id="productGrid">
         
         <div class="p-card">
+            <div class="promo-badge">-17%</div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Q_XlKKcTVnk" title="Clavier Corsair K55" allowfullscreen></iframe>
+            </div>
+            <div class="p-content">
+                <h3>Clavier CORSAIR K55 RGB PRO</h3>
+                <div class="stars-container" data-id="corsair-k55">
+                    <span class="star" data-val="1">★</span><span class="star" data-val="2">★</span><span class="star" data-val="3">★</span><span class="star" data-val="4">★</span><span class="star" data-val="5">★</span>
+                </div>
+                <div class="vote-msg">Laisse un avis !</div>
+                
+                <div class="price-tag"><span class="old-price">59,99 €</span>49,95 €</div>
+                <a href="https://amzn.to/4rrpmGT" target="_blank" class="amazon-link">📦 VOIR SUR AMAZON</a>
+            </div>
+        </div>
+
+        <div class="p-card">
+            <div class="promo-badge">-22%</div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Q_XlKKcTVnk" title="Souris Spirit Of Gamer" allowfullscreen></iframe>
+            </div>
+            <div class="p-content">
+                <h3>Souris SPIRIT OF GAMER 12800 DPI</h3>
+                <div class="stars-container" data-id="souris-sog">
+                    <span class="star" data-val="1">★</span><span class="star" data-val="2">★</span><span class="star" data-val="3">★</span><span class="star" data-val="4">★</span><span class="star" data-val="5">★</span>
+                </div>
+                <div class="vote-msg">Laisse un avis !</div>
+
+                <div class="price-tag"><span class="old-price">24,90 €</span>19,50 €</div>
+                <a href="https://amzn.to/4rnOOgn" target="_blank" class="amazon-link">📦 VOIR SUR AMAZON</a>
+            </div>
+        </div>
+
+        <div class="p-card">
             <div class="promo-badge">-25%</div>
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/eZ7qWdB1QAc" title="AOC Gaming" allowfullscreen></iframe>
             </div>
             <div class="p-content">
                 <h3>Ecran Incurvé AOC Gaming 25G42E</h3>
+                <div class="stars-container" data-id="ecran-aoc">
+                    <span class="star" data-val="1">★</span><span class="star" data-val="2">★</span><span class="star" data-val="3">★</span><span class="star" data-val="4">★</span><span class="star" data-val="5">★</span>
+                </div>
+                <div class="vote-msg">Laisse un avis !</div>
+
                 <div class="price-tag"><span class="old-price">115,99 €</span>87,07 €</div>
                 <a href="https://amzn.to/4daAzYC" target="_blank" class="amazon-link">📦 VOIR SUR AMAZON</a>
             </div>
@@ -97,6 +145,11 @@
             </div>
             <div class="p-content">
                 <h3>Chaise de bureau SONGMICS OBG73BRV1</h3>
+                <div class="stars-container" data-id="chaise-songmics">
+                    <span class="star" data-val="1">★</span><span class="star" data-val="2">★</span><span class="star" data-val="3">★</span><span class="star" data-val="4">★</span><span class="star" data-val="5">★</span>
+                </div>
+                <div class="vote-msg">Laisse un avis !</div>
+
                 <div class="price-tag"><span class="old-price">119,99 €</span>87,99 €</div>
                 <a href="https://amzn.to/3P5eNeV" target="_blank" class="amazon-link">📦 VOIR SUR AMAZON</a>
             </div>
@@ -109,6 +162,11 @@
             </div>
             <div class="p-content">
                 <h3>Bureau Ergonomique HLONONE LED</h3>
+                <div class="stars-container" data-id="bureau-hlonone">
+                    <span class="star" data-val="1">★</span><span class="star" data-val="2">★</span><span class="star" data-val="3">★</span><span class="star" data-val="4">★</span><span class="star" data-val="5">★</span>
+                </div>
+                <div class="vote-msg">Laisse un avis !</div>
+
                 <div class="price-tag"><span class="old-price">79,99 €</span>66,66 €</div>
                 <a href="https://amzn.to/4d7vxw4" target="_blank" class="amazon-link">📦 VOIR SUR AMAZON</a>
             </div>
@@ -117,6 +175,7 @@
     </div> <p class="footer-text">© 2026 ZONE BON PLAN | Ryan - TOUS DROITS RÉSERVÉS</p>
 
     <script>
+        // Fonction de recherche
         function filterProducts() {
             let input = document.getElementById('searchBar').value.toLowerCase();
             let cards = document.getElementsByClassName('p-card');
@@ -130,6 +189,61 @@
                 }
             }
         }
+
+        // --- SYSTEME D'ETOILES ---
+        document.querySelectorAll('.stars-container').forEach(container => {
+            const productId = container.getAttribute('data-id');
+            const stars = container.querySelectorAll('.star');
+            const msgBox = container.nextElementSibling; // La div .vote-msg
+
+            // Vérifier si l'utilisateur a déjà voté (sauvegarde locale)
+            const savedVote = localStorage.getItem('vote_' + productId);
+            
+            if (savedVote) {
+                // Si déjà voté, on allume les étoiles et on bloque
+                container.classList.add('voted');
+                msgBox.innerText = "Merci pour ton vote !";
+                stars.forEach(s => {
+                    if (s.getAttribute('data-val') <= savedVote) {
+                        s.classList.add('active');
+                    }
+                });
+            } else {
+                // Effet de survol (hover)
+                stars.forEach(star => {
+                    star.addEventListener('mouseover', function() {
+                        if (container.classList.contains('voted')) return;
+                        let val = this.getAttribute('data-val');
+                        stars.forEach(s => {
+                            if (s.getAttribute('data-val') <= val) s.classList.add('hovered');
+                            else s.classList.remove('hovered');
+                        });
+                    });
+
+                    star.addEventListener('mouseout', function() {
+                        if (container.classList.contains('voted')) return;
+                        stars.forEach(s => s.classList.remove('hovered'));
+                    });
+
+                    // Clic pour voter
+                    star.addEventListener('click', function() {
+                        if (container.classList.contains('voted')) return;
+                        let val = this.getAttribute('data-val');
+                        
+                        // Allumer les étoiles
+                        stars.forEach(s => {
+                            s.classList.remove('hovered');
+                            if (s.getAttribute('data-val') <= val) s.classList.add('active');
+                        });
+
+                        // Bloquer le vote et sauvegarder localement
+                        container.classList.add('voted');
+                        localStorage.setItem('vote_' + productId, val);
+                        msgBox.innerText = "Vote enregistré (" + val + "/5) !";
+                    });
+                });
+            }
+        });
     </script>
 </body>
 </html>
